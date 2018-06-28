@@ -1,2 +1,2 @@
 # Barduino Admin
-Aplicación para Adminitrar Barduino.
+Aplicación para Administrar Barduino.
