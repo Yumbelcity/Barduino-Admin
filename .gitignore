@@ -1,0 +1,6 @@
+node_modules/**/*
+.vscode/*
+.expo/*
+npm-debug.*
+application/utils/Firebase.js*
+application/utils/Facebook.js*
