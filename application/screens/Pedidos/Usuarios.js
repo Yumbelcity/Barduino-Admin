@@ -18,7 +18,7 @@ export default class Usuarios extends Component {
       loaded: false
     }
 
-    this.refUsuarios = firebase.database().ref().child('usuario').orderByChild('estado').equalTo('online')
+    this.refUsuarios = firebase.database().ref().child('usuario').orderByChild('logueado').equalTo(true)
   }
 
   componentDidMount() {
@@ -31,7 +31,7 @@ export default class Usuarios extends Component {
             _idUsuario: row.key,
             nombre: row.val().nombre,
             apellido: row.val().apellido,
-            estado: row.val().estado,
+            logueado: row.val().logueado,
             activado: row.val().activado,
           })
         } else {
@@ -39,7 +39,7 @@ export default class Usuarios extends Component {
             _idUsuario: row.key,
             nombre: row.val().nombre,
             apellido: row.val().apellido,
-            estado: row.val().estado,
+            logueado: row.val().logueado,
             activado: row.val().activado,
           })
         }

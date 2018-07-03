@@ -32,6 +32,7 @@ export default class DetalleUsuarios extends Component {
         this.setState({ total })
         pedidos.push({
           _idPedido: row.key,
+          _idUsuario: row.val()._idUsuario,
           bebida: row.val().bebida,
           estado: row.val().estado,
           ml: row.val().ml,

@@ -82,7 +82,7 @@ export default class Profile extends Component {
           />
           <AppButton
             bgColor='rgba(203, 78, 72, 0.9)'
-            title='Guardar en local'
+            title='Guardar'
             action={this.save}
             iconName='save'
             iconSize={20}

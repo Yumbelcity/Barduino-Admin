@@ -95,10 +95,14 @@ const usuariosScreenStack = createStackNavigator(
       })
     },
     Logout: {
-      screen: LogoutScreen
+      screen: LogoutScreen,
     },
     Pagar: {
-      screen: PagarPedidosScreen
+      screen: PagarPedidosScreen,
+      navigationOptions: ({ navigation }) => ({
+        title: 'Pagado',
+        headerLeft: backIcon(navigation, 'arrow-left'),
+      })
     }
   },
   navigationOptions

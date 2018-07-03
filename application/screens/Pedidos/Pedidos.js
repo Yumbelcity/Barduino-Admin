@@ -26,6 +26,7 @@ export default class Pedidos extends Component {
         if (row.val().estado === 'preparando') {
           pedidos.unshift({
             _idPedido: row.key,
+            _idUsuario: row.val()._idUsuario,
             bebida: row.val().bebida,
             estado: row.val().estado,
             ml: row.val().ml,
@@ -34,6 +35,7 @@ export default class Pedidos extends Component {
         } else if (row.val().estado === 'pendiente') {
           pedidos.push({
             _idPedido: row.key,
+            _idUsuario: row.val()._idUsuario,
             bebida: row.val().bebida,
             estado: row.val().estado,
             ml: row.val().ml,

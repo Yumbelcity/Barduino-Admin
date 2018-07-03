@@ -3,7 +3,6 @@ import { Alert, Text, View, StyleSheet, FlatList } from 'react-native'
 import BackgroundImage from '../../components/BackgroundImage'
 import PreLoader from '../../components/PreLoader'
 import SinTragos from '../../components/Pedido/SinTragos'
-import TragoAddButton from '../../components/Pedido/TragoAddButton'
 import { Card, ListItem } from 'react-native-elements'
 import * as firebase from 'firebase'
 import { NavigationActions } from 'react-navigation'
@@ -26,6 +25,7 @@ export default class Preparados extends Component {
       snapshot.forEach(row => {
         pedidos.push({
           _idPedido: row.key,
+          _idUsuario: row.val()._idUsuario,
           bebida: row.val().bebida,
           estado: row.val().estado,
           ml: row.val().ml,
