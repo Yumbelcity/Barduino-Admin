@@ -8,7 +8,7 @@ import GuestNavigation from './application/navigations/Guest'
 import LoggedNavigation from './application/navigations/Logged'
 import { RectButton } from 'react-native-gesture-handler';
 
-console.disableYellowBox = Platform.OS === 'android' ? true : false;
+console.disableYellowBox = true;
 
 export default class App extends Component {
   constructor() {
