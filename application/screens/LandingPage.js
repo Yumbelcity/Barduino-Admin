@@ -9,7 +9,7 @@ import facebook from '../utils/Facebook'
 export default class LandingPage extends Component {
 
   static navigationOptions = {
-    title: 'Bistro Restobar'
+    title: 'Administrador Bistro Restobar'
   }
 
   login = () => {
@@ -48,26 +48,29 @@ export default class LandingPage extends Component {
   render() {
     return (
       <BackgroundImage source={require('../../assets/images/login_bg.jpg')}>
-        <View style={{ justifyContent: 'center', flex: 1, }} >
+        <View style={{ justifyContent: 'center', flex: 1, margin: 30, }} >
           <AppButton
-            bgColor='rgba(111, 38, 74, 0.9)'
-            title='Entrar'
+            bgColor='rgba(200, 38, 74, 1)'
+            title='Iniciar Sesión'
             action={this.login}
             iconName='sign-in'
             iconSize={20}
             iconColor='#fff'
+            right={true}
+            marginBottom={5}
           />
           <AppButton
-            bgColor='rgba(200, 200, 50, 0.9)'
+            bgColor='rgba(200, 38, 74, 0.7)'
             title='Regístrate'
             action={this.register}
             iconName='user-plus'
             iconSize={20}
             iconColor='#fff'
+            marginBottom={20}
           />
           <AppButton
             bgColor='rgba(67, 67, 146, 0.9)'
-            title='Facebook'
+            title='Inicia Sesión con Facebook'
             action={this.facebook}
             iconName='facebook'
             iconSize={20}

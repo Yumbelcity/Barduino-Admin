@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 
 export default class AppButton extends Component {
   render() {
-    const { action, iconName, iconColor, iconSize, title, bgColor, width, right } = this.props
+    const { action, iconName, iconColor, iconSize, title, bgColor, width, right, marginBottom } = this.props
     return (
       <Button
         onPress={action}
@@ -14,7 +14,7 @@ export default class AppButton extends Component {
           height: 45,
           borderWidth: 0,
           borderRadius: 100,
-          marginBottom: 5,
+          marginBottom: marginBottom,
           width: width,
         }}
         title={title}

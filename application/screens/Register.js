@@ -92,12 +92,13 @@ export default class Register extends Component {
               value={this.state.user}
             />
             <AppButton
-              bgColor='rgba(200, 200, 50, 0.9)'
+              bgColor='rgba(200, 38, 74, 1)'
               title='Registrarme'
               action={this.register}
               iconName='user-plus'
-              iconSize={30}
+              iconSize={20}
               iconColor='#fff'
+              marginBottom={5}
             />
           </Card>
         </View>

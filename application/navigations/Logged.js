@@ -8,7 +8,8 @@ import LogoutScreen from '../screens/Logout'
 import PersonalizarTragoScreen from '../screens/Pedidos/DetailRestaurant'
 import PagarPedidosScreen from '../screens/Pedidos/PagarPedidos'
 import ProfileScreen from '../screens/Profile'
-import { createDrawerNavigator, createStackNavigator, createBottomTabNavigator } from 'react-navigation'
+import MantencionScreen from '../screens/Mantencion'
+import { createStackNavigator, createBottomTabNavigator } from 'react-navigation'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
@@ -134,7 +135,19 @@ const preparadosScreenStack = createStackNavigator(
   navigationOptions
 )
 
-// export default createDrawerNavigator(
+const mantencionScreenStack = createStackNavigator(
+  {
+    Mantencion: {
+      screen: MantencionScreen,
+      navigationOptions: ({ navigation }) => ({
+        title: 'Mantención',
+        headerRight: logoutIcon(navigation, 'sign-out')
+      })
+    }
+  },
+  navigationOptions
+)
+
 export default createBottomTabNavigator(
   {
     Usuarios: {
@@ -145,7 +158,10 @@ export default createBottomTabNavigator(
     },
     Listos: {
       screen: preparadosScreenStack
-    }
+    },
+    // Mantención: {
+    //   screen: mantencionScreenStack
+    // }
   },
   {
     navigationOptions: ({ navigation }) => ({
@@ -158,6 +174,8 @@ export default createBottomTabNavigator(
           iconName = `ios-checkmark-circle${focused ? '' : '-outline'}`;
         } else if (routeName === 'Usuarios') {
           iconName = `ios-contact${focused ? '' : '-outline'}`;
+        } else if (routeName === 'Mantención') {
+          iconName = `ios-cog${focused ? '' : ''}`;
         }
 
         // You can return any component that you like here! We usually use an

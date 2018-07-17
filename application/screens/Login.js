@@ -71,12 +71,13 @@ export default class Login extends Component {
               options={this.options}
             />
             <AppButton
-              bgColor='rgba(111, 38, 74, 0.7)'
-              title='Login'
+              bgColor='rgba(200, 38, 74, 1)'
+              title='Iniciar Sesión'
               action={this.login}
               iconName='sign-in'
               iconSize={20}
               iconColor='#fff'
+              right={true}
             />
           </Card>
         </View>
